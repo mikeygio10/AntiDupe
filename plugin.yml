@@ -1,7 +1,0 @@
-name: AntiDupe
-main: AntiDupe\AntiDupe
-version: 1.0.0
-api: 3.0.0, 4.0.0
-load:
-description: An advanced plugin to stop item duplication on your server.
-website: https://github.com/BlockNetworks/AntiDupe
