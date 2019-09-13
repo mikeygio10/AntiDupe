@@ -10,7 +10,7 @@ use pocketmine\level\sound\AnvilUseSound;
 use pocketmine\level\Level;
 use pocketmine\Player;
 use pocketmine\Server;
-class Main extends PluginBase implements Listener{
+class AntiDupe extends PluginBase implements Listener{
 	
 	public $prefix = "§8[§5AntiDupe§8] ";
 	
