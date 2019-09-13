@@ -3,5 +3,5 @@ branches:
 - master
 projects:
   AntiDupe:
-    path: "IceCruelStuff/"
+    path: "AntiDupe/"
 ...
