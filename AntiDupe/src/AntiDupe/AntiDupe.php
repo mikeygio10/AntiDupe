@@ -2,7 +2,6 @@
    
 namespace AntiDupe;
 use pocketmine\tile\Tile;
-use pocketmine\tile\Hopper;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerInteractEvent;
@@ -62,16 +61,6 @@ class AntiDupe extends PluginBase implements Listener{
 			}
 			
 			$p->sendPopup("§cThis item is not repairable."); 
-			return true;
-		}
-		
-		if($tile instanceof Hopper){
-			$e->setCancelled(true);
-			return true;
-		}
-		
-		if($i->getId() == 410){
-			$e->setCancelled(true);
 			return true;
 		}
 	}
