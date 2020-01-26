@@ -12,7 +12,7 @@ use pocketmine\Player;
 use pocketmine\Server;
 class AntiDupe extends PluginBase implements Listener{
 	
-	public $prefix = "§8[§5AntiDupe§8] ";
+	public $prefix = "§8[§5Repair§8] ";
 	
 	
 	public function onEnable(){
@@ -27,7 +27,7 @@ class AntiDupe extends PluginBase implements Listener{
 		$i = $p->getInventory()->getItemInHand();
 		$tile = $p->getLevel()->getTile($b);
 		
-		if($b->getId() == 145){
+		if($b->getId() == 380){
 			$e->setCancelled(true);
 			
 			if($i->getId() == 0){
@@ -42,7 +42,7 @@ class AntiDupe extends PluginBase implements Listener{
 			if($id == 256 || $id == 257|| $id == 258 || $id == 259 || $id == 267 || $id == 276 || $id == 277 || $id == 278 || $id == 279 || $id == 306 || $id == 307 || $id == 308 || $id == 309 || $id == 310 || $id == 311 || $id == 312 || $id == 313 || $id == 292 || $id == 293){
 				
 				if($p->getXpLevel() < 30){
-					$p->sendPopup("§cInsufficient Xp.");
+					$p->sendPopup("§cInsufficient Xp. Need 30 Levels.");
 					return true;
 				}
 				
@@ -62,16 +62,6 @@ class AntiDupe extends PluginBase implements Listener{
 			}
 			
 			$p->sendPopup("§cThis item is not repairable."); 
-			return true;
-		}
-		
-		if($tile instanceof Hopper){
-			$e->setCancelled(true);
-			return true;
-		}
-		
-		if($i->getId() == 410){
-			$e->setCancelled(true);
 			return true;
 		}
 	}
