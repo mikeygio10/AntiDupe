@@ -12,7 +12,7 @@ use pocketmine\Player;
 use pocketmine\Server;
 class AntiDupe extends PluginBase implements Listener{
 	
-	public $prefix = "§8[§5AntiDupe§8] ";
+	public $prefix = "§8[§5Repair§8] ";
 	
 	
 	public function onEnable(){
@@ -27,7 +27,7 @@ class AntiDupe extends PluginBase implements Listener{
 		$i = $p->getInventory()->getItemInHand();
 		$tile = $p->getLevel()->getTile($b);
 		
-		if($b->getId() == 145){
+		if($b->getId() == 380){
 			$e->setCancelled(true);
 			
 			if($i->getId() == 0){
@@ -62,16 +62,6 @@ class AntiDupe extends PluginBase implements Listener{
 			}
 			
 			$p->sendPopup("§cThis item is not repairable."); 
-			return true;
-		}
-		
-		if($tile instanceof Hopper){
-			$e->setCancelled(true);
-			return true;
-		}
-		
-		if($i->getId() == 410){
-			$e->setCancelled(true);
 			return true;
 		}
 	}
